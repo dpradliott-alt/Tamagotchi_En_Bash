@@ -1,7 +1,7 @@
 # Tamagotchi Bash (Digimon-like)
 
-Un mini-jeu rétro en **Bash**, inspiré des Tamagotchi et de l'évolution
-des créatures façon **Digimon** (œuf → disciple → formes futures).
+Un mini-jeu rétro en Bash, inspiré des Tamagotchi et de l'évolution
+des créatures façon Digimon (œuf → disciple → formes futures).
 
 Ce projet est avant tout un **projet d’apprentissage**, orienté
 logique de jeu, scripting Bash et plaisir rétro.
