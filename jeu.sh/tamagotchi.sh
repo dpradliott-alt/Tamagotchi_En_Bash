@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source fonctions.sh
 
 echo " Tu as trouvé trois oeufs dans les bois. Il va falloir s'en occuper d'un, les autres à la poubelle... "
 echo
@@ -20,7 +21,7 @@ echo "Ok sympa comme nom $nom..."
 echo 
 sleep 1
 # echo "fichier ASCII" mettre les ASCII des oeufs ici avec les nombre de 1 à 3
-read -p "Choisi un de ces oeufs, au diable les deux autres" choixoeuf
+read -p "Choisi un de ces oeufs, au diable les deux autres (1, 2 ou 3 ?)  " choixoeuf
 
 fct_choix_oeuf
 sleep 1
@@ -33,29 +34,30 @@ fct_choix_oeuf() {
 
 while true; do
 
-case $choixoeuf in
+    case "$choixoeuf" in
 
-1) # echo "ASCII oeuf 1"
-    echo "Tu as donc choisi celui là." 
-    forme="oeuf1"
-    break
-    ;;
-2) # pareil oeuf 2
-    echo "Tu as donc choisi celui là."
-    forme="oeuf2"
-    break
-    ;;
-3) # pareil oeuf 3
-    echo "Tu as donc choisi celui là."
-    forme="oeuf3"
-    break
-    ;;
-*) echo "Choisi entre 1, 2 ou 3"
-    read -p "Choisi un de ces oeufs, au diable les deux autres" choixoeuf
-    ;;
+        1) # echo "ASCII oeuf 1"
+        echo "Tu as donc choisi celui là." 
+        forme="oeuf1"
+        break
+        ;;
+        2) # pareil oeuf 2
+        echo "Tu as donc choisi celui là."
+        forme="oeuf2"
+        break
+        ;;
+        3) # pareil oeuf 3
+        echo "Tu as donc choisi celui là."
+        forme="oeuf3"
+        break
+        ;;
+        *) echo "Choisi entre 1, 2 ou 3"
+        read -p "Choisi un de ces oeufs, au diable les deux autres" choixoeuf
+        ;;
 
-esac
+    esac
 
+done
 
 }
 
