@@ -1,4 +1,3 @@
-#!/bin/bash
 
 faim=0
 age=0
