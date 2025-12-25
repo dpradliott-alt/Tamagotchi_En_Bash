@@ -4,7 +4,7 @@ Un mini-jeu rétro en Bash, inspiré des Tamagotchi et de l'évolution
 des créatures façon Digimon (œuf → disciple → formes futures).
 
 Ce projet est avant tout un **projet d’apprentissage**, orienté
-logique de jeu, scripting Bash et plaisir rétro.
+logique de jeu, scripting Bash.
 
 ---
 
@@ -37,7 +37,7 @@ logique de jeu, scripting Bash et plaisir rétro.
 - [x] Choix du nom
 - [x] Choix de l'œuf
 - [x] Système de stats
-- [x] Phase œuf
+- [ ] Phase œuf
 - [ ] Éclosion en disciple
 - [ ] ASCII art par état
 - [ ] Animations ASCII
