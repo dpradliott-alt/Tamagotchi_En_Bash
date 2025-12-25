@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source stats.sh
+source ../Fonctions/stats.sh
 
 fct_choix_oeuf() {
 
@@ -75,4 +75,9 @@ read -p "que veux-tu faire? 1- Couver l'oeuf | 2- Insulter l'oeuf " choix_me
              ;;
     esac
 
+}
+
+afficher_oeufs() {
+
+    cat ../Affichage/oeufs.txt
 }
