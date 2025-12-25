@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source fonctions.sh
+source ../Fonctions/fonctions.sh
+source ../Fonctions/stats.sh
 
 echo " Tu as trouvé trois oeufs dans les bois. Il va falloir s'en occuper d'un, les autres à la poubelle... "
 echo
