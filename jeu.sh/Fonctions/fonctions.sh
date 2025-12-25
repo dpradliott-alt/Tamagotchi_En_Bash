@@ -10,17 +10,17 @@ while true; do
 
         1) # echo "ASCII oeuf 1"
         echo "Tu as donc choisi celui là." 
-        forme="oeuf1"
+        forme="Oeuf Tacheté"
         break
         ;;
         2) # pareil oeuf 2
         echo "Tu as donc choisi celui là."
-        forme="oeuf2"
+        forme="Oeuf Rayé"
         break
         ;;
         3) # pareil oeuf 3
         echo "Tu as donc choisi celui là."
-        forme="oeuf3"
+        forme="Oeuf Carré"
         break
         ;;
         *) echo "Choisi entre 1, 2 ou 3"
