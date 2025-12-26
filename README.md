@@ -44,4 +44,18 @@ logique de jeu, scripting Bash.
 - [ ] Sauvegarde de la partie
 - [ ] Évolutions avancées (Digimon-like)
 
+## Ce que j'ai appris
+
+- [x] Créer mes premiers ASCII
+- [x] Utiliser des arguments propres pour une fonction (animer_oeuf)
+- [x] Utiliser une commande ANSI pour la première fois : 
+\033 (pour faire comprendre au terminal: ce qui suit est une commande spéciale)(équivalent ESC)
+[ debut de commande
+2 mode tout l'ecran
+J Erase Display
+H Replacer le curseur ligne 1
+\033[2J\033[H
+Evite les erreurs d'affichage sur VSCode qui à du mal avec "clear"
+
+
 
