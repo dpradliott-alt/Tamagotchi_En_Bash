@@ -8,17 +8,17 @@ while true; do
 
     case "$choixoeuf" in
 
-        1) # echo "ASCII oeuf 1"
+        1) 
         echo "Tu as donc choisi celui là." 
         forme="Oeuf Tacheté"
         break
         ;;
-        2) # pareil oeuf 2
+        2) 
         echo "Tu as donc choisi celui là."
         forme="Oeuf Rayé"
         break
         ;;
-        3) # pareil oeuf 3
+        3) 
         echo "Tu as donc choisi celui là."
         forme="Oeuf Carré"
         break

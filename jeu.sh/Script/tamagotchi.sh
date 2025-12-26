@@ -30,3 +30,5 @@ fct_choix_oeuf
 sleep 1
 echo
 echo "Oeuf choisi = $forme"
+
+
