@@ -37,7 +37,7 @@ logique de jeu, scripting Bash.
 - [x] Choix du nom
 - [x] Choix de l'œuf
 - [x] Système de stats
-- [ ] Phase œuf
+- [X] Phase œuf
 - [ ] Éclosion en disciple
 - [ ] ASCII art par état
 - [ ] Animations ASCII
