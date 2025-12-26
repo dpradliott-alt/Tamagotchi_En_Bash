@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../Fonctions/stats.sh
+effacer() { printf "\033[2J\033[H"; }
 
 fct_choix_oeuf() {
 
@@ -37,7 +37,7 @@ Couver_oeuf(){
 
 ((bonheur+=1))
 ((age+=1))
-echo "et voilà, rechauffe toi sous mon cul !"
+echo "rechauffe toi!"
 echo
 echo "$nom se sent au chaud"
 echo
@@ -62,19 +62,56 @@ sleep 1
 
 
 menu_oeuf() {
-
-read -p "que veux-tu faire? 1- Couver l'oeuf | 2- Insulter l'oeuf " choix_me
+    read -p "Choix (1 = couver, 2 = insulter) : " choix_me
 
     case "$choix_me" in
-
-        1) Couver_oeuf
-         ;;
-        2) Insulter_oeuf 
-         ;;
-        *) echo "T'as que 1 ou 2 comme choix l'ami, on est pas dans un JDR ! "
-             ;;
+        1) Couver_oeuf ;;
+        2) Insulter_oeuf ;;
+        *)
+            echo "Choix invalide (1 ou 2)."
+            sleep 1
+            ;;
     esac
+}
 
+afficher_animation() {
+  local normal="$1"
+  local droite="$2"
+  local gauche="$3"
+
+  for _ in {1..4}; do
+    effacer
+    cat "$gauche"
+    sleep 0.3
+
+    effacer
+    cat "$droite"
+    sleep 0.3
+  done
+
+  effacer
+  cat "$normal"
+}
+
+afficher_menu_oeuf() {
+  if [[ "$forme" == "Oeuf Tacheté" ]]; then
+    afficher_animation \
+      ../Affichage/menu_oeuftacheté/menu_oeuftacheté.txt \
+      ../Affichage/menu_oeuftacheté/menu_oeuftachetédroite.txt \
+      ../Affichage/menu_oeuftacheté/menu_oeuftachetégauche.txt
+
+  elif [[ "$forme" == "Oeuf Rayé" ]]; then
+    afficher_animation \
+      ../Affichage/menu_oeufrayé/menu_oeufrayé.txt \
+      ../Affichage/menu_oeufrayé/menu_oeufrayédroite.txt \
+      ../Affichage/menu_oeufrayé/menu_oeufrayégauche.txt
+
+  else
+    afficher_animation \
+      ../Affichage/menu_oeufcarré/menu_oeufcarré.txt \
+      ../Affichage/menu_oeufcarré/menu_oeufcarrédroite.txt \
+      ../Affichage/menu_oeufcarré/menu_oeufcarrégauche.txt
+  fi
 }
 
 afficher_oeufs() {
