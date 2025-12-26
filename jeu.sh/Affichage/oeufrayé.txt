@@ -1,0 +1,9 @@
+          ___
+        XXXXXXX
+       .........   * *
+      XXXXXXXXXXXX  *
+ *  *..............
+ *   XXXXXXXXXXXX##
+      .........###
+        XXXXXX##
+   ~~~~~~~~~~~~~~~~
