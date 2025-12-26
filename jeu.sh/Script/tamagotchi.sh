@@ -21,9 +21,9 @@ echo
 echo "Ok sympa comme nom $nom..."
 echo 
 sleep 1
-# echo "fichier ASCII" mettre les ASCII des oeufs ici avec les nombre de 1 à 3
 afficher_oeufs
 echo
+sleep 1
 read -p "Choisi un de ces oeufs, au diable les deux autres (1, 2 ou 3 ?)  " choixoeuf
 
 fct_choix_oeuf
@@ -31,4 +31,14 @@ sleep 1
 echo
 echo "Oeuf choisi = $forme"
 
+sleep 1.5
+
+while (( $age<=2 )); do
+ 
+
+ afficher_menu_oeuf
+ sleep 1
+ menu_oeuf
+ sleep 2
+done
 
