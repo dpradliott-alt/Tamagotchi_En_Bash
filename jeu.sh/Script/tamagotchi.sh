@@ -30,15 +30,18 @@ fct_choix_oeuf
 sleep 1
 echo
 echo "Oeuf choisi = $forme"
+changements_stats_oeuf
+
 
 sleep 1.5
 
 while (( $age<=2 )); do
  
-
  afficher_menu_oeuf
  sleep 1
  menu_oeuf
+ afficher_stats_oeuf
  sleep 2
+ 
 done
 

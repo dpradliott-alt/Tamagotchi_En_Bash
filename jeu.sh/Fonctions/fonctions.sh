@@ -118,3 +118,18 @@ afficher_oeufs() {
 
     cat ../Affichage/oeufs.txt
 }
+
+changements_stats_oeuf() {
+
+    if [[ "$forme" == "Oeuf Tacheté" ]]; then
+        ((intelligence-=1))
+        ((force+=2))
+
+    elif [[ "$forme" == "Oeuf Rayé" ]]; then
+        ((force-=1))
+        ((intelligence+=2))
+
+    else
+        ((vitesse+=1))
+    fi
+}
