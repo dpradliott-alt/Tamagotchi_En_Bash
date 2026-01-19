@@ -96,27 +96,27 @@ afficher_animation() {
 afficher_menu_oeuf() {
   if [[ "$forme" == "Oeuf Tacheté" ]]; then
     afficher_animation \
-      ../Affichage/menu_oeuftacheté/menu_oeuftacheté.txt \
-      ../Affichage/menu_oeuftacheté/menu_oeuftachetédroite.txt \
-      ../Affichage/menu_oeuftacheté/menu_oeuftachetégauche.txt
+      $ROOT_DIR/Affichage/menu_oeuftacheté/menu_oeuftacheté.txt \
+      $ROOT_DIR/Affichage/menu_oeuftacheté/menu_oeuftachetédroite.txt \
+      $ROOT_DIR/Affichage/menu_oeuftacheté/menu_oeuftachetégauche.txt
 
   elif [[ "$forme" == "Oeuf Rayé" ]]; then
     afficher_animation \
-      ../Affichage/menu_oeufrayé/menu_oeufrayé.txt \
-      ../Affichage/menu_oeufrayé/menu_oeufrayédroite.txt \
-      ../Affichage/menu_oeufrayé/menu_oeufrayégauche.txt
+      $ROOT_DIR/Affichage/menu_oeufrayé/menu_oeufrayé.txt \
+      $ROOT_DIR/Affichage/menu_oeufrayé/menu_oeufrayédroite.txt \
+      $ROOT_DIR/Affichage/menu_oeufrayé/menu_oeufrayégauche.txt
 
   else
     afficher_animation \
-      ../Affichage/menu_oeufcarré/menu_oeufcarré.txt \
-      ../Affichage/menu_oeufcarré/menu_oeufcarrédroite.txt \
-      ../Affichage/menu_oeufcarré/menu_oeufcarrégauche.txt
+      $ROOT_DIR/Affichage/menu_oeufcarré/menu_oeufcarré.txt \
+      $ROOT_DIR/Affichage/menu_oeufcarré/menu_oeufcarrédroite.txt \
+      $ROOT_DIR/Affichage/menu_oeufcarré/menu_oeufcarrégauche.txt
   fi
 }
 
 afficher_oeufs() {
 
-    cat ../Affichage/oeufs.txt
+    cat $ROOT_DIR/Affichage/oeufs.txt
 }
 
 changements_stats_oeuf() {
