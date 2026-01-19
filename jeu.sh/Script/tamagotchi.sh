@@ -1,4 +1,5 @@
 #!/bin/bash
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/Fonctions/stats.sh"
 source "$SCRIPT_DIR/Fonctions/fonctions.sh"
