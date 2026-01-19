@@ -1,8 +1,9 @@
 #!/bin/bash
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-source "$SCRIPT_DIR/Fonctions/stats.sh"
-source "$SCRIPT_DIR/Fonctions/fonctions.sh"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+source "$ROOT_DIR/Fonctions/stats.sh"
+source "$ROOT_DIR/Fonctions/fonctions.sh"
 
 echo " Tu as trouvé trois oeufs dans les bois. Il va falloir s'en occuper d'un, les autres à la poubelle... "
 echo
