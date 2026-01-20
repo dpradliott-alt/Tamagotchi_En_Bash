@@ -26,12 +26,12 @@ echo
 ##HUD
 
 curseur_terminal(){
-printf "\033[%s;%sH" "$1" "$2"
+printf '\033[%d;%dH' "$1" "$2"
 }
 
 ecris_a(){
     local l="$1" ; col="$2" ; texte="$3"
-    curseur_terminal "l" "col"
+    curseur_terminal "$l" "$col"
     printf "%s" "$texte"
 }
 
