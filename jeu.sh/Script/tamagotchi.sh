@@ -37,13 +37,15 @@ changements_stats_oeuf
 
 sleep 1.5
 
-while (( $age<=2 )); do
- 
- afficher_menu_oeuf
- sleep 1
- menu_oeuf
- afficher_stats_oeuf
- sleep 2
- 
+
+while (( age <= 2 )); do
+  afficher_menu_oeuf      
+  ecran_hud               
+  hud_update              
+
+  menu_oeuf             
+  hud_update             
+
+  sleep 1
 done
 
