@@ -39,13 +39,19 @@ sleep 1.5
 
 
 while (( age <= 2 )); do
-  afficher_menu_oeuf      
-  ecran_hud               
-  hud_update              
+    afficher_menu_oeuf      
+    ecran_hud               
+    hud_update              
 
-  menu_oeuf             
-  hud_update             
+    menu_oeuf             
+    hud_update             
 
-  sleep 1
+    sleep 1
 done
+
+evolution_disciple
+
+while (( age >=3 && vivant == 1  )); do
+
+
 

@@ -62,7 +62,7 @@ sleep 1
 
 
 menu_oeuf() {
-  
+
     curseur_terminal 30 1
     read -p "Choix (1 = couver, 2 = insulter) : " choix_me
 
@@ -134,4 +134,12 @@ changements_stats_oeuf() {
     else
         ((vitesse+=1))
     fi
+}
+
+evolution_disciple() {
+
+
+
+
+  
 }
