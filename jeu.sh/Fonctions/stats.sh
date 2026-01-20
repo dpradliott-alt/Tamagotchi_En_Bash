@@ -72,9 +72,9 @@ ecran_hud() {
 hud_update() {
     affiche_stats 23 14 12 "$nom"
     affiche_stats 24 14 12 "$age"
-    
+
     # Bonheur (barre)
-    curseur_terminal 26 14
+    curseur_terminal 25 14
     barre "$bonheur" 10 10
     # Energie (barre)
     curseur_terminal 26 14
