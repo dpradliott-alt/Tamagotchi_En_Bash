@@ -54,9 +54,9 @@ ecran_hud() {
 }
 
 hud_update() {
-  affiche_stats 20 12 12 "$nom"
-  affiche_stats 21 13 12 "$age"
-  affiche_stats 22 13 12 "$bonheur"
-  affiche_stats 23 13 12 "$energie"
-  affiche_stats 24 13 12 "$faim"
+  affiche_stats 20 14 12 "$nom"
+  affiche_stats 21 14 12 "$age"
+  affiche_stats 22 14 12 "$bonheur"
+  affiche_stats 23 14 12 "$energie"
+  affiche_stats 24 14 12 "$faim"
 }
