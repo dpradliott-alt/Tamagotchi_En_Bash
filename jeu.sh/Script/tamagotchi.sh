@@ -49,9 +49,7 @@ while (( age <= 2 )); do
     sleep 1
 done
 
-evolution_disciple
 
-while (( age >=3 && vivant == 1  )); do
 
 
 
