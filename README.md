@@ -1,5 +1,7 @@
 # Tamagotchi Bash (Digimon-like)
 
+Auteur : dpradliott-alt 
+
 Un mini-jeu rétro en Bash, inspiré des Tamagotchi et de l'évolution
 des créatures façon Digimon (œuf → disciple → formes futures).
 
