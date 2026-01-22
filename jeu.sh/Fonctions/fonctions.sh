@@ -136,6 +136,39 @@ changements_stats_oeuf() {
     fi
 }
 
+changement_stats_disciple() {
+
+    if [[ "$bonheur" >= 5 && "$forme" == "Oeuf Rayé" ]]; then
+     ((forme=="Mana"))
+     ((intelligence+=2))
+     ((vitesse+=1))
+    elif [[ "$bonheur" <= 4 && "$forme" == "Oeuf Rayé" ]]; then
+     ((forme=="Nimera"))
+     ((force+=3))
+     ((vitesse+=1))
+     ((intelligence-=1))
+    elif [[ "$bonheur" >= 5 && "$forme" == "Oeuf Tacheté" ]]; then
+     ((forme=="Bob")) ## Pauvre toi
+     ((intelligence+=1))
+     ((vitesse+=1))
+     ((force+=1))
+    elif [[ "$bonheur" <= 4 && "$forme" == "Oeuf Tacheté" ]]; then
+     ((forme=="Black-Sad")) 
+     ((intelligence+=1))
+     ((vitesse+=3))
+     ((force-=1))
+    elif [[ "$bonheur" >= 5 && "$forme" == "Oeuf Carré" ]]; then
+     ((forme=="Soldicrab")) 
+     ((vitesse-=1))
+     ((force+=3))
+    elif [[ "$bonheur" <= 4 && "$forme" == "Oeuf Carré" ]]; then
+     ((forme=="e-belzebuth")) 
+     ((intelligence+=2))
+     ((force+=2))
+     
+    fi
+}
+
 
 animation_evolution() {
 

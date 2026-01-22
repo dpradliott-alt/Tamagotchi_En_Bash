@@ -49,6 +49,11 @@ while (( age <= 2 )); do
     sleep 1
 done
 
+if [[ "$age" == 3 ]]; do
+ changement_stats_disciple
+ animation_evolution
+fi
+
 
 
 
