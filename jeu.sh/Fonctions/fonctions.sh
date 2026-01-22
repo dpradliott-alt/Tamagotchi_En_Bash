@@ -136,10 +136,75 @@ changements_stats_oeuf() {
     fi
 }
 
-evolution_disciple() {
 
+animation_evolution() {
 
+  local crak1="$1"
+  local crak2="$2"
+  local disciple="$3"
 
-
-  
+effacer
+echo "Ton oeuf bouge !!! IL CRAAAAAQUE"
+cat "$crak1"
+sleep 0.4
+effacer
+echo "Oh Merde, j'espère c'est pas un T-REX le bordel"
+cat "$crak2"
+sleep 0.3
+effacer
+cat "$disciple"
+sleep 0.2
+echo "Whaaaa... Degueulasse.. J'appelle la DAS ?"
+sleep 3
+effacer
 }
+
+
+afficher_evolution_disciple() {
+
+if [[ "$forme" == "e-belzebuth" ]]; then
+  animation_evolution \
+  $ROOT_DIR/Affichage/Eclosion/oeuf_carré_bad/eclosioncarrebad1.txt \
+  $ROOT_DIR/Affichage/Eclosion/oeuf_carré_bad/eclosioncarrebad2.txt \
+  $ROOT_DIR/Affichage/Eclosion/oeuf_carré_bad/eclosioncarrebad3.txt
+
+elif [[ "$forme" == "Soldicrab" ]]; then
+  animation_evolution \
+  $ROOT_DIR/Affichage/Eclosion/oeuf_carré_good/eclosioncarregood1.txt \
+  $ROOT_DIR/Affichage/Eclosion/oeuf_carré_good/eclosioncarregood2.txt \
+  $ROOT_DIR/Affichage/Eclosion/oeuf_carré_good/eclosioncarregood3.txt
+
+elif [[ "$forme" == "Nimera" ]]; then
+
+  animation_evolution \  
+  $ROOT_DIR/Affichage/Eclosion/oeufrayé_bad/eclosionrayébad1.txt \
+  $ROOT_DIR/Affichage/Eclosion/oeufrayé_bad/eclosionrayébad2.txt \
+  $ROOT_DIR/Affichage/Eclosion/oeufrayé_bad/eclosionrayébad3.txt 
+
+elif [[ "$forme" == "Mana" ]]; then
+
+  animation_evolution \  
+  $ROOT_DIR/Affichage/Eclosion/oeufrayé_good/eclosionrayégood1.txt \
+  $ROOT_DIR/Affichage/Eclosion/oeufrayé_good/eclosionrayégood2.txt \
+  $ROOT_DIR/Affichage/Eclosion/oeufrayé_good/eclosionrayégood3.txt
+
+elif [[ "$forme" == "Black-Sad" ]]; then
+
+  animation_evolution \  
+  $ROOT_DIR/Affichage/Eclosion/oeuftachete_bad/eclosiontachetébad1.txt \
+  $ROOT_DIR/Affichage/Eclosion/oeuftachete_bad/eclosiontachetébad2.txt \
+  $ROOT_DIR/Affichage/Eclosion/oeuftachete_bad/eclosiontachetébad3.txt  
+
+elif [[ "$forme" == "Bob" ]]; then  ## Pauvre Bob
+
+  animation_evolution \  
+  $ROOT_DIR/Affichage/Eclosion/oeuftachete_good/eclosiontachetégood1.txt \
+  $ROOT_DIR/Affichage/Eclosion/oeuftachete_good/eclosiontachetégood2.txt \
+  $ROOT_DIR/Affichage/Eclosion/oeuftachete_good/eclosiontachetégood3.txt  
+
+fi
+}
+
+
+
+
