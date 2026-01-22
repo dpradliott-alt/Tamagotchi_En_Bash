@@ -148,7 +148,7 @@ changement_stats_disciple() {
      ((vitesse+=1))
      ((intelligence-=1))
     elif [[ "$bonheur" -ge 5 && "$forme" == "Oeuf Tacheté" ]]; then
-     forme=="Bob" ## Pauvre toi
+     forme="Bob" ## Pauvre toi
      ((intelligence+=1))
      ((vitesse+=1))
      ((force+=1))
@@ -224,16 +224,16 @@ animation_evolution() {
 effacer
 echo "Ton oeuf bouge !!! IL CRAAAAAQUE"
 cat "$crak1"
-sleep 0.4
+sleep 2
 effacer
 echo "Oh Merde, j'espère c'est pas un T-REX le bordel"
 cat "$crak2"
-sleep 0.3
+sleep 2
 effacer
 cat "$disciple"
-sleep 0.2
+sleep 2
 echo "Whaaaa... Degueulasse.. J'appelle la DAS ?"
-sleep 3
+sleep 5
 effacer
 }
 
