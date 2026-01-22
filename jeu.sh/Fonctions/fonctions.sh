@@ -138,37 +138,82 @@ changements_stats_oeuf() {
 
 changement_stats_disciple() {
 
-    if [[ "$bonheur" >= 5 && "$forme" == "Oeuf Rayé" ]]; then
-     ((forme=="Mana"))
+    if [[ "$bonheur" -ge 5 && "$forme" == "Oeuf Rayé" ]]; then
+     forme="Mana"
      ((intelligence+=2))
      ((vitesse+=1))
-    elif [[ "$bonheur" <= 4 && "$forme" == "Oeuf Rayé" ]]; then
-     ((forme=="Nimera"))
+    elif [[ "$bonheur" -le 4 && "$forme" == "Oeuf Rayé" ]]; then
+     forme="Nimera"
      ((force+=3))
      ((vitesse+=1))
      ((intelligence-=1))
-    elif [[ "$bonheur" >= 5 && "$forme" == "Oeuf Tacheté" ]]; then
-     ((forme=="Bob")) ## Pauvre toi
+    elif [[ "$bonheur" -ge 5 && "$forme" == "Oeuf Tacheté" ]]; then
+     forme=="Bob" ## Pauvre toi
      ((intelligence+=1))
      ((vitesse+=1))
      ((force+=1))
-    elif [[ "$bonheur" <= 4 && "$forme" == "Oeuf Tacheté" ]]; then
-     ((forme=="Black-Sad")) 
+    elif [[ "$bonheur" -le 4 && "$forme" == "Oeuf Tacheté" ]]; then
+     forme="Black-Sad"
      ((intelligence+=1))
      ((vitesse+=3))
      ((force-=1))
-    elif [[ "$bonheur" >= 5 && "$forme" == "Oeuf Carré" ]]; then
-     ((forme=="Soldicrab")) 
+    elif [[ "$bonheur" -ge 5 && "$forme" == "Oeuf Carré" ]]; then
+     forme="Soldicrab" 
      ((vitesse-=1))
      ((force+=3))
-    elif [[ "$bonheur" <= 4 && "$forme" == "Oeuf Carré" ]]; then
-     ((forme=="e-belzebuth")) 
+    elif [[ "$bonheur" -le 4 && "$forme" == "Oeuf Carré" ]]; then
+     forme="e-belzebuth"
      ((intelligence+=2))
      ((force+=2))
      
     fi
 }
 
+
+afficher_evolution_disciple() {
+
+if [[ "$forme" == "e-belzebuth" ]]; then
+  animation_evolution \
+  "$ROOT_DIR/Affichage/Eclosion/oeuf_carré_bad/eclosioncarrebad1.txt" \
+  "$ROOT_DIR/Affichage/Eclosion/oeuf_carré_bad/eclosioncarrebad2.txt" \
+  "$ROOT_DIR/Affichage/Eclosion/oeuf_carré_bad/eclosioncarrebad3.txt"
+
+elif [[ "$forme" == "Soldicrab" ]]; then
+  animation_evolution \
+  "$ROOT_DIR/Affichage/Eclosion/oeuf_carré_good/eclosioncarregood1.txt" \
+  "$ROOT_DIR/Affichage/Eclosion/oeuf_carré_good/eclosioncarregood2.txt" \
+  "$ROOT_DIR/Affichage/Eclosion/oeuf_carré_good/eclosioncarregood3.txt"
+
+elif [[ "$forme" == "Nimera" ]]; then
+
+  animation_evolution \
+  "$ROOT_DIR/Affichage/Eclosion/oeufrayé_bad/eclosionrayébad1.txt" \
+  "$ROOT_DIR/Affichage/Eclosion/oeufrayé_bad/eclosionrayébad2.txt" \
+  "$ROOT_DIR/Affichage/Eclosion/oeufrayé_bad/eclosionrayébad3.txt" 
+
+elif [[ "$forme" == "Mana" ]]; then
+
+  animation_evolution \
+  "$ROOT_DIR/Affichage/Eclosion/oeufrayé_good/eclosionrayégood1.txt" \
+  "$ROOT_DIR/Affichage/Eclosion/oeufrayé_good/eclosionrayégood2.txt" \
+  "$ROOT_DIR/Affichage/Eclosion/oeufrayé_good/eclosionrayégood3.txt"
+
+elif [[ "$forme" == "Black-Sad" ]]; then
+
+  animation_evolution \
+  "$ROOT_DIR/Affichage/Eclosion/oeuftachete_bad/eclosiontachetébad1.txt" \
+  "$ROOT_DIR/Affichage/Eclosion/oeuftachete_bad/eclosiontachetébad2.txt" \
+  "$ROOT_DIR/Affichage/Eclosion/oeuftachete_bad/eclosiontachetébad3.txt"  
+
+elif [[ "$forme" == "Bob" ]]; then  ## Pauvre Bob
+
+  animation_evolution \
+  "$ROOT_DIR/Affichage/Eclosion/oeuftachete_good/eclosiontachetégood1.txt" \
+  "$ROOT_DIR/Affichage/Eclosion/oeuftachete_good/eclosiontachetégood2.txt" \
+  "$ROOT_DIR/Affichage/Eclosion/oeuftachete_good/eclosiontachetégood3.txt"  
+
+fi
+}
 
 animation_evolution() {
 
@@ -191,53 +236,5 @@ echo "Whaaaa... Degueulasse.. J'appelle la DAS ?"
 sleep 3
 effacer
 }
-
-
-afficher_evolution_disciple() {
-
-if [[ "$forme" == "e-belzebuth" ]]; then
-  animation_evolution \
-  $ROOT_DIR/Affichage/Eclosion/oeuf_carré_bad/eclosioncarrebad1.txt \
-  $ROOT_DIR/Affichage/Eclosion/oeuf_carré_bad/eclosioncarrebad2.txt \
-  $ROOT_DIR/Affichage/Eclosion/oeuf_carré_bad/eclosioncarrebad3.txt
-
-elif [[ "$forme" == "Soldicrab" ]]; then
-  animation_evolution \
-  $ROOT_DIR/Affichage/Eclosion/oeuf_carré_good/eclosioncarregood1.txt \
-  $ROOT_DIR/Affichage/Eclosion/oeuf_carré_good/eclosioncarregood2.txt \
-  $ROOT_DIR/Affichage/Eclosion/oeuf_carré_good/eclosioncarregood3.txt
-
-elif [[ "$forme" == "Nimera" ]]; then
-
-  animation_evolution \  
-  $ROOT_DIR/Affichage/Eclosion/oeufrayé_bad/eclosionrayébad1.txt \
-  $ROOT_DIR/Affichage/Eclosion/oeufrayé_bad/eclosionrayébad2.txt \
-  $ROOT_DIR/Affichage/Eclosion/oeufrayé_bad/eclosionrayébad3.txt 
-
-elif [[ "$forme" == "Mana" ]]; then
-
-  animation_evolution \  
-  $ROOT_DIR/Affichage/Eclosion/oeufrayé_good/eclosionrayégood1.txt \
-  $ROOT_DIR/Affichage/Eclosion/oeufrayé_good/eclosionrayégood2.txt \
-  $ROOT_DIR/Affichage/Eclosion/oeufrayé_good/eclosionrayégood3.txt
-
-elif [[ "$forme" == "Black-Sad" ]]; then
-
-  animation_evolution \  
-  $ROOT_DIR/Affichage/Eclosion/oeuftachete_bad/eclosiontachetébad1.txt \
-  $ROOT_DIR/Affichage/Eclosion/oeuftachete_bad/eclosiontachetébad2.txt \
-  $ROOT_DIR/Affichage/Eclosion/oeuftachete_bad/eclosiontachetébad3.txt  
-
-elif [[ "$forme" == "Bob" ]]; then  ## Pauvre Bob
-
-  animation_evolution \  
-  $ROOT_DIR/Affichage/Eclosion/oeuftachete_good/eclosiontachetégood1.txt \
-  $ROOT_DIR/Affichage/Eclosion/oeuftachete_good/eclosiontachetégood2.txt \
-  $ROOT_DIR/Affichage/Eclosion/oeuftachete_good/eclosiontachetégood3.txt  
-
-fi
-}
-
-
 
 

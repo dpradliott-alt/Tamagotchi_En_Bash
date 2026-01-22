@@ -49,9 +49,9 @@ while (( age <= 2 )); do
     sleep 1
 done
 
-if [[ "$age" == 3 ]]; do
+if [[ "$age" == 3 ]]; then
  changement_stats_disciple
- animation_evolution
+ afficher_evolution_disciple
 fi
 
 
