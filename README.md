@@ -41,7 +41,9 @@ logique de jeu, scripting Bash.
 - [x] Système de stats
 - [X] Phase œuf
 - [X] HUD
-- [ ] Éclosion en disciple
+- [X] Éclosion en disciple
+- [ ] HUD Disciple
+- [ ] Les Différentes options
 - [ ] ASCII art par état
 - [ ] Animations ASCII
 - [ ] Sauvegarde de la partie
