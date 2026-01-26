@@ -237,4 +237,8 @@ sleep 5
 effacer
 }
 
-
+donner_a_manger(){
+ (($age +=1))
+ (($faim -=1))
+ (($energie +=1))
+}
